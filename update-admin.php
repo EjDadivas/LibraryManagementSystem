@@ -55,7 +55,7 @@ include('format/sidebar.php');
             <tr>
                 <th scope="row">Password:</th>
                 <td>
-                    <input type=" text" name="password" value="<?= $password ?>" class="form-control">
+                    <input type="password" name="password" value="<?= $password ?>" class="form-control">
                 </td>
             </tr>
 
@@ -91,11 +91,11 @@ if (isset($_POST['submit'])) {
 
     if ($res == TRUE) {
 
-        echo "<script> alert('Book Update Successful') 
+        echo "<script>
             window.location.href='admin.php'</script>";
     } else {
 
-        echo "<script> alert('Book Update Failed')
+        echo "<script> alert('Admin Update Failed')
         </script";
     }
 }

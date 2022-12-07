@@ -3,9 +3,7 @@
     <div class="container-fluid">
         <div class="row">
             <div class="col-md-6">
-                <script>
-                    document.write(new Date().getFullYear())
-                </script> © BSIT 3-B
+                2022 © Esther Joy P. Dadivas | dadivasestherjoy@gmail.com
             </div>
         </div>
     </div>

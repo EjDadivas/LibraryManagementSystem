@@ -16,7 +16,7 @@ include('format/sidebar.php');
                 </td>
             </tr>
             <tr>
-                <th>last Name:</th>
+                <th>Last Name:</th>
                 <td>
                     <input type="text" name="lastname" class="form-control" placeholder="Enter last name" required>
                 </td>
@@ -64,8 +64,15 @@ if (isset($_POST['submit'])) {
     $res = mysqli_query($conn, $sql) or die(mysqli_error($conn));
 
     if ($res == TRUE) {
-        echo "<script> alert('New Student Account Added') 
-        window.location.href='students.php'</script>";
+        echo "<script> 
+        var r = confirm('New Student Added. Add another student?');
+        if (r == true) {
+            window.location.href='add-student.php';
+        } else {
+            window.location.href='students.php';
+        }
+        
+        </script>";
     } else {
         echo "<script> alert('Failed') 
        </script>";

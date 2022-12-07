@@ -21,7 +21,8 @@ if ($result == TRUE) {
 		$output .= '<div class="table-responsive">
 					<table class="table table-bordered table-striped">
 					<thead>
-						<tr>					
+						<tr>	
+							<th>ID</th>				
 							<th>First Name</th>
 							<th>Last Name</th>
 							<th>Course</th>
@@ -41,7 +42,7 @@ if ($result == TRUE) {
 
 			$output .= '
 			<tr>
-			
+				<td>' . $student_id . '</td>
 				<td>' . $firstname . '</td>
 				<td>' . $lastname . '</td>
 				<td>' . $course . '</td>

@@ -10,15 +10,6 @@ if (isset($_GET['id'])) {
     $res = mysqli_query($conn, $sql);
 
     if ($res == true) {
-
-        echo "
-    <script>
-    alert('Admin deleted')
-    </script>";
-        $_SESSION['delete'] =  "
-    <script>
-    alert('Admin deleted')
-    </script>";
         header('location: admin.php');
     } else {
         echo "DELETION FAILED";

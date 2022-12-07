@@ -11,17 +11,7 @@ include('format/sidebar.php');
     <a href="add-student.php" class="btn btn-primary btn-lg">Add Student</a>
     <br>
     <br>
-    <?php
-    if (isset($_SESSION['delete'])) {
-        echo $_SESSION['delete'];
-        unset($_SESSION['delete']);
-    }
-
-    ?>
     <div id="result">
-        <table class="table table-bordered table-striped" id="table-data">
-
-        </table>
 
     </div>
 </div>

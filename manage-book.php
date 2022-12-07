@@ -22,7 +22,7 @@ if ($result == TRUE) {
 					<table class="table table-bordered table-striped">
 					<thead>
 						<tr>
-						
+							<th>ID</th>
 							<th>Book Title</th>
 							<th>Author</th>
 							<th>Publisher</th>
@@ -44,7 +44,7 @@ if ($result == TRUE) {
 
 			$output .= '
 			<tr>
-			
+				<td>' . $book_id  . '</td>
 				<td>' . $title . '</td>
 				<td>' . $author . '</td>
 				<td>' . $publisher . '</td>

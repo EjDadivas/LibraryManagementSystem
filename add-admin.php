@@ -61,8 +61,15 @@ if (isset($_POST['submit'])) {
     $res = mysqli_query($conn, $sql) or die(mysqli_error($conn));
 
     if ($res == TRUE) {
-        echo "<script> alert('New Admin Account Added') 
-        window.location.href='admin.php'</script>";
+        echo "<script> 
+        var r = confirm('Admin added successfully. Add another admin?');
+        if (r == true) {
+            window.location.href='add-admin.php';
+        } else {
+            window.location.href='admin.php';
+        }
+        
+        </script>";
     } else {
         echo "<script> alert('Failed') 
        </script>";

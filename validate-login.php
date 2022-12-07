@@ -16,9 +16,10 @@ $result = mysqli_query($conn, $Query);
 $row = mysqli_fetch_array($result, MYSQLI_ASSOC);
 $count = mysqli_num_rows($result);
 if ($count == 1) {
-    echo "<script> alert('Welcome succesfully') 
+    echo "<script>
     window.location.href='home.php'</script>";
 } else {
-    echo "<script> alert('Wrong login') 
+    echo "<script> alert('Login Failed. Check your email or password') 
+    window.location.href='index.php'
     </script>";
 }

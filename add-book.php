@@ -78,8 +78,16 @@ if (isset($_POST['submit'])) {
 
     // check whether the data is inserted or not 
     if ($res == TRUE) {
-        echo "<script> alert('Book Added succesfully') 
-        window.location.href='add-book.php'</script>";
+        echo "<script> 
+        var r = confirm('Book Added Successfully. Add another book?');
+        if (r == true) {
+            window.location.href='add-book.php';
+        } else {
+            window.location.href='home.php';
+        }
+        
+        </script>";
+
 
         // exit();
     } else {

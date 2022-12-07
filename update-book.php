@@ -104,7 +104,7 @@ if (isset($_POST['submit'])) {
 
     if ($res == TRUE) {
 
-        echo "<script> alert('Book Update Successful') 
+        echo "<script>
             window.location.href='home.php'</script>";
     } else {
 

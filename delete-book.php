@@ -10,17 +10,10 @@ if (isset($_GET['id'])) {
     $res = mysqli_query($conn, $sql);
 
     if ($res == true) {
-
-        echo "
-    <script>
-    alert('Book deleted')
-    </script>";
-        $_SESSION['delete'] =  "
-    <script>
-    alert('Book deleted')
-    </script>";
         header('location: home.php');
     } else {
-        echo "DELETION FAILED";
+        echo "<script>
+        alert('Book deleted')
+        </script>";
     }
 }

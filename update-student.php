@@ -92,7 +92,7 @@ if (isset($_POST['submit'])) {
 
     if ($res == TRUE) {
 
-        echo "<script> alert('Student Account Update Successful') 
+        echo "<script>
             window.location.href='students.php'</script>";
     } else {
 

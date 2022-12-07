@@ -79,8 +79,14 @@ if (isset($_POST['Borrow'])) {
         ";
     $res = mysqli_query($conn, $sql);
     if ($res == TRUE) {
-        echo "<script> alert('Transaction Added succesfully') 
-        window.location.href='borrow.php'
+        echo "<script> 
+        var r = confirm('Transaction Successful. Borrow another book?');
+        if (r == true) {
+            window.location.href='add-borrow.php';
+        } else {
+            window.location.href='borrow.php';
+        }
+        
         </script>";
     } else {
         echo "Failed " . mysqli_error($conn);
