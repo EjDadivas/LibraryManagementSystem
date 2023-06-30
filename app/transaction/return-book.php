@@ -1,5 +1,5 @@
 <?php
-include 'dbconnect.php';
+include '../../dbconnect.php';
 $tran_id = $_GET['id'];
 $sql = "UPDATE transaction SET status = 'returned',
 date_returned = CURDATE()

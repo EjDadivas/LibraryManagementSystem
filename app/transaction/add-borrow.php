@@ -1,6 +1,6 @@
 <?php
-include('format/header.php');
-include('format/sidebar.php');
+include('../../format/header.php');
+include('../../format/sidebar.php');
 ?>
 
 <?php
@@ -80,12 +80,13 @@ if (isset($_POST['Borrow'])) {
     $res = mysqli_query($conn, $sql);
     if ($res == TRUE) {
         echo "<script> 
-        var r = confirm('Transaction Successful. Borrow another book?');
-        if (r == true) {
-            window.location.href='add-borrow.php';
-        } else {
-            window.location.href='borrow.php';
-        }
+        window.location.href='borrow.php';
+        // var r = confirm('Transaction Successful. Borrow another book?');
+        // if (r == true) {
+        //     window.location.href='add-borrow.php';
+        // } else {
+        //     window.location.href='borrow.php';
+        // }
         
         </script>";
     } else {
@@ -111,7 +112,7 @@ if (isset($_POST['Borrow'])) {
                         <tr>
                             <th>Student No:</th>
                             <td>
-                                <input type="text" value="<?php echo isset($_POST['student_id']) ? $student_id : ''; ?>" placeholder="Enter Student Number" name="student_id" class="form-control" required>
+                                <input type="text" value="<?php echo isset($_POST['student_id']) ? $student_id : ''; ?>" placeholder="Enter Student ID" name="student_id" class="form-control" required>
                             </td>
                         </tr>
 
@@ -126,13 +127,13 @@ if (isset($_POST['Borrow'])) {
                     <tr>
                         <th>Due Date:</th>
                         <td>
-                            <input type="date" value="<?php echo isset($_POST['date_due']) ? $_POST['date_due'] : ''; ?>" placeholder="Enter Student Number" name="date_due" class="form-control" required>
+                            <input type="date" value="<?php echo isset($_POST['date_due']) ? $_POST['date_due'] : ''; ?>" placeholder="Enter Student ID" name="date_due" class="form-control" required>
                         </td>
                     </tr>
                     <tr>
                         <th>Book No:</th>
                         <td>
-                            <input type="text" value="<?php echo isset($_POST['book_id']) ? $book_id : ''; ?>" placeholder="Enter Student Number" name="book_id" class="form-control" required>
+                            <input type="text" value="<?php echo isset($_POST['book_id']) ? $book_id : ''; ?>" placeholder="Enter Book ID" name="book_id" class="form-control" required>
                         </td>
                     </tr>
 
@@ -214,4 +215,4 @@ if (isset($_POST['Borrow'])) {
 
 </div>
 <?php
-include('format/footer.php'); ?>
+include('../../format/footer.php'); ?>

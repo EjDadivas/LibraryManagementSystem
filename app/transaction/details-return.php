@@ -1,13 +1,13 @@
 <?php
-include('format/header.php');
-include('format/sidebar.php');
+include('../../format/header.php');
+include('../../format/sidebar.php');
 ?>
 
 <?php
 $tran_id = $_GET['id'];
 
 $sql = "SELECT * FROM transaction
-WHERE tran_id = '$tran_id' AND status = 'borrowed'";
+WHERE tran_id = '$tran_id' AND status = 'returned'";
 
 $res = mysqli_query($conn, $sql);
 if ($res == true) {
@@ -20,6 +20,7 @@ if ($res == true) {
         $book_id = $rows['book_id'];
         $student_id = $rows['student_id'];
         $date_borrowed = $rows['date_borrowed'];
+        $date_returned = $rows['date_returned'];
         $date_due = $rows['date_due'];
 
 
@@ -73,25 +74,27 @@ if ($res == true) {
 
 <div class="container-fluid">
     <br>
-    <h1 class="text-center">Transaction Details</h1>
+    <h1 class="text-center">Return Details</h1>
     <br>
     <div class="row">
+
         <div class="col">
             <form action="" method="POST">
                 <br>
                 <table class="table table-bordered table-striped">
                     <tr>
                         <th>Borrowed Date:</th>
-                        <td><?php echo $date_borrowed  ?> </td>
+                        <td><?php echo $date_returned  ?> </td>
                     </tr>
                     <tr>
                         <th>Returned Date:</th>
-                        <td> </td>
+                        <td><?php echo $date_borrowed  ?> </td>
                     </tr>
                     <tr>
                         <th>Student No:</th>
                         <td><?php echo $student_id  ?> </td>
                     </tr>
+
                     <tr>
                         <th>Student First Name: </th>
                         <td><?php echo $firstname  ?> </td>
@@ -144,10 +147,13 @@ if ($res == true) {
                     <td><?php echo $category  ?></td>
                 </tr>
             </table>
+
+
+
         </div>
     </div>
     </form>
 </div>
 
 </div>
-<?php include('format/footer.php'); ?>
+<?php include('../../format/footer.php'); ?>
