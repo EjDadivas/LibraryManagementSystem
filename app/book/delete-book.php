@@ -1,5 +1,5 @@
 <?php
-require('dbconnect.php');
+require('../../dbconnect.php');
 $book_id = $_GET['id'];
 
 if (isset($_GET['id'])) {
@@ -10,7 +10,7 @@ if (isset($_GET['id'])) {
     $res = mysqli_query($conn, $sql);
 
     if ($res == true) {
-        header('location: home.php');
+        header('location: book.php');
     } else {
         echo "<script>
         alert('Book deleted')

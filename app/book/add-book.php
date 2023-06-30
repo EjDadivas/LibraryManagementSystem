@@ -1,6 +1,6 @@
 <?php
-include('format/header.php');
-include('format/sidebar.php');
+include('../../format/header.php');
+include('../../format/sidebar.php');
 ?>
 
 <!-- ============================================================== -->
@@ -55,7 +55,7 @@ include('format/sidebar.php');
 </div>
 
 <?php
-include('format/footer.php');
+include('../../format/footer.php');
 
 if (isset($_POST['submit'])) {
 
@@ -79,12 +79,13 @@ if (isset($_POST['submit'])) {
     // check whether the data is inserted or not 
     if ($res == TRUE) {
         echo "<script> 
-        var r = confirm('Book Added Successfully. Add another book?');
-        if (r == true) {
-            window.location.href='add-book.php';
-        } else {
-            window.location.href='home.php';
-        }
+         window.location.href='home.php';
+        // var r = confirm('Book Added Successfully. Add another book?');
+        // if (r == true) {
+        //     window.location.href='add-book.php';
+        // } else {
+        //     window.location.href='book.php';
+        // }
         
         </script>";
 
