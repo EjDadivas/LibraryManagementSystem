@@ -1,6 +1,6 @@
 <ul class="side-nav">
     <li class="side-nav-item">
-        <a href="home.php" class="side-nav-link">
+        <a href="../book/book.php" class="side-nav-link">
             <i class="uil-home-alt"></i>
             <span> Manage Books </span>
         </a>
@@ -14,10 +14,10 @@
         <div class="collapse" id="sidebarEcommerce">
             <ul class="side-nav-second-level">
                 <li>
-                    <a href="admin.php">Admin</a>
+                    <a href="../admin/admin.php">Admin</a>
                 </li>
                 <li>
-                    <a href="students.php">Students</a>
+                    <a href="../student/students.php">Students</a>
                 </li>
 
             </ul>
@@ -33,10 +33,10 @@
         <div class="collapse" id="sidebarEmail">
             <ul class="side-nav-second-level">
                 <li>
-                    <a href="borrow.php">Borrow</a>
+                    <a href="../transaction/borrow.php">Borrow</a>
                 </li>
                 <li>
-                    <a href="return.php">Return</a>
+                    <a href="../transaction/return.php">Return</a>
                 </li>
             </ul>
         </div>
