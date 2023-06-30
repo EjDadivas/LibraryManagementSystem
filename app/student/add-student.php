@@ -1,6 +1,6 @@
 <?php
-include('format/header.php');
-include('format/sidebar.php');
+include('../../format/header.php');
+include('../../format/sidebar.php');
 ?>
 <div class="container">
     <br>
@@ -9,6 +9,12 @@ include('format/sidebar.php');
 
     <form action="" method="POST">
         <table class="table table-bordered table-striped">
+            <tr>
+                <th>Student ID:</th>
+                <td>
+                    <input type="text" name="student_id" class="form-control" placeholder="Enter student id" required>
+                </td>
+            </tr>
             <tr>
                 <th>First Name:</th>
                 <td>
@@ -46,16 +52,17 @@ include('format/sidebar.php');
 </div>
 
 <?php
-include('format/footer.php');
+include('../../format/footer.php');
 
 if (isset($_POST['submit'])) {
-
+    $student_id = $_POST['student_id'];
     $firstname = $_POST['firstname'];
     $lastname = $_POST['lastname'];
     $course = $_POST['course'];
     $section = $_POST['section'];
 
     $sql = "INSERT INTO student SET
+    student_id = $student_id,
     firstname = '$firstname',
     lastname = '$lastname',
     course = '$course',
@@ -65,12 +72,13 @@ if (isset($_POST['submit'])) {
 
     if ($res == TRUE) {
         echo "<script> 
-        var r = confirm('New Student Added. Add another student?');
-        if (r == true) {
-            window.location.href='add-student.php';
-        } else {
-            window.location.href='students.php';
-        }
+        window.location.href='students.php';
+        // var r = confirm('New Student Added. Add another student?');
+        // if (r == true) {
+        //     window.location.href='add-student.php';
+        // } else {
+        //     window.location.href='students.php';
+        // }
         
         </script>";
     } else {
