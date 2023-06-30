@@ -1,6 +1,6 @@
 <?php
-include('format/header.php');
-include('format/sidebar.php');
+include('../../format/header.php');
+include('../../format/sidebar.php');
 ?>
 
 <div class="container">
@@ -103,5 +103,5 @@ if (isset($_POST['submit'])) {
 
 <?php
 
-include('format/footer.php');
+include('../../format/footer.php');
 ?>

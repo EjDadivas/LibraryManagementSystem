@@ -1,5 +1,5 @@
 <?php
-require('dbconnect.php');
+require('../../dbconnect.php');
 $admin_id = $_GET['id'];
 
 if (isset($_GET['id'])) {

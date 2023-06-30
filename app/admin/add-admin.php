@@ -1,6 +1,6 @@
 <?php
-include('format/header.php');
-include('format/sidebar.php');
+include('../../format/header.php');
+include('../../format/sidebar.php');
 ?>
 <div class="container">
     <br>
@@ -45,7 +45,7 @@ include('format/sidebar.php');
 </div>
 
 <?php
-include('format/footer.php');
+include('../../format/footer.php');
 
 if (isset($_POST['submit'])) {
     $firstname = $_POST['firstname'];
@@ -62,12 +62,13 @@ if (isset($_POST['submit'])) {
 
     if ($res == TRUE) {
         echo "<script> 
-        var r = confirm('Admin added successfully. Add another admin?');
-        if (r == true) {
-            window.location.href='add-admin.php';
-        } else {
-            window.location.href='admin.php';
-        }
+        window.location.href='admin.php';
+        // var r = confirm('Admin added successfully. Add another admin?');
+        // if (r == true) {
+        //     window.location.href='add-admin.php';
+        // } else {
+        //     window.location.href='admin.php';
+        // }
         
         </script>";
     } else {

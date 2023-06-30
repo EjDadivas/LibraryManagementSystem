@@ -1,6 +1,6 @@
 <?php
-include('format/header.php');
-include('format/sidebar.php');
+include('../../format/header.php');
+include('../../format/sidebar.php');
 ?>
 
 <div class="container">
@@ -48,4 +48,4 @@ include('format/sidebar.php');
     });
 </script>
 <?php
-include('format/footer.php'); ?>
+include('../../format/footer.php'); ?>
